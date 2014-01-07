@@ -1,4 +1,5 @@
-# 旺中守門員
+# 旺中獸
+
 
 自動拒看旺旺中時集團旗下所有網路媒體。
 
@@ -19,6 +20,11 @@
 * 中天電視 `*.ctitv.com.tw`
 * 中國電視公司 `*.ctv.com.tw`
 * 旺報 `*.want-daily.com`
+* (2014/1/7) 新增
+* 時報週刊 `*.ctweekly.com.tw`
+* 英文旺報 `*.wantchinatimes.com`
+* 愛女生雜誌粉絲團 `*.facebook.com/ctwgirl`
+
 
 ## 聲明
 
