@@ -1,3 +1,20 @@
+//codeing note: localStorage only supports Strings
+
+var blackLists = [
+    "chinatimes.com",
+    "ctitv.com.tw",
+    "ctv.com.tw",
+    "want-daily.com",
+    "ctweekly.com.tw",
+    "wantchinatimes.com",
+    "facebook.com\\/ctwgirl"
+];
+localStorage["lenLists"] = blackLists.length;
+localStorage["blackLists"] = JSON.stringify(blackLists);
+
+for (var i = 0, a = new Array(blackLists.length); i < blackLists.length;) a[i++] = 1;
+localStorage["urlSwitch"] = JSON.stringify(a); 
+
 //callback
 var listener = function(details)
 {
@@ -7,23 +24,24 @@ var listener = function(details)
     }
     else
     {
-        return { cancel: true };
+        var L = JSON.parse(localStorage["blackLists"]);
+        var urlSwitch = JSON.parse(localStorage["urlSwitch"]);
+        for (var i = 0; i < localStorage["lenLists"]; ++i)
+        {
+            if ( (urlSwitch[i] == 1) && (details.url.search(new RegExp(L[i])) > -1) ) //pos
+            {
+                localStorage["blockedURL"] = details.url;
+                console.log(details.url + " matched " + i + " : " + RegExp(L[i]) + " : " + details.url.search(new RegExp(L[i])));
+                //return { cancel: true };
+                return { redirectUrl : chrome.runtime.getURL("redirect.html")};
+            }
+        }
+        return {};
     }
 };
-
-//filter
-var blackUrls =
-[
-    "*://*.chinatimes.com/*",
-    "*://*.ctitv.com.tw/*",
-    "*://*.ctv.com.tw/*",
-    "*://*.want-daily.com/*",
-    "*://*.ctweekly.com.tw/*",
-    "*://*.wantchinatimes.com/*",
-    "*://*.facebook.com/ctwgirl/*"
-];
+//console.log(chrome.runtime.getURL("options.html"));
 
 var opt_extraInfoSpec = ["blocking"]; //synchronous
 
 chrome.webRequest.onBeforeRequest.addListener(
-    listener, { urls: blackUrls }, opt_extraInfoSpec);
+    listener, { urls: ["<all_urls>"] }, opt_extraInfoSpec);

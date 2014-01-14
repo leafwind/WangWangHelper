@@ -1,12 +1,12 @@
 {
-  "name": "旺中獸",
-  "version": "0.4.0",
+  "name": "進擊的旺中獸",
+  "version": "0.4.1",
   "manifest_version": 2,
 
-  "description": "從今天起，拒看中時電子報、中天電視、中視的網站。原始碼下載： github.com/chitsaou/no-wang-wang",
+  "description": "從今天起，拒看中時電子報、中天電視、中視的網站。<br />原始碼下載： https://github.com/leafwind/no-wang-wang<br />本軟體無任何商業行為，圖片為網路資源，如有侵權經告知後將會立即刪除。",
 
   "background": {
-    "scripts": ["background.js"]
+    "scripts": ["background.js", "redirect.js"]
   },
 
   "icons": {
@@ -19,14 +19,19 @@
     "default_popup": "popup.html"
   },
 
+  "web_accessible_resources": [
+    "redirect.html"
+  ],
+
   "options_page": "options.html",
   
   "permissions": [
-    "webRequest", //chrome.webRequest
+    "webRequest",
     "webRequestBlocking",
     "*://*.chinatimes.com/*",
     "*://*.ctitv.com.tw/*",
     "*://*.ctv.com.tw/*",
-    "*://*.want-daily.com/*"
+    "*://*.want-daily.com/*",
+    "*://*.facebook.com/ctwgirl/*"
   ]
 }

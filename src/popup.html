@@ -1,32 +1,45 @@
 <!doctype html>
 <html>
-  <head>
+<head>
     <title>Getting Started Extension's Popup</title>
     <style>
-      body {
-        min-width: 350px;
-        min-height: 350px;
-        overflow-x: hidden;
-      }
+        body {
+            min-width: 350px;
+            min-height: 350px;
+            overflow-x: hidden;
+        }
 
-      img {
-        margin: 5px;
-        border: 2px solid black;
-        vertical-align: middle;
-        width: 75px;
-        height: 75px;
-      }
+        img {
+            margin: 5px;
+            border: 2px solid black;
+            vertical-align: middle;
+            width: 75px;
+            height: 75px;
+        }
     </style>
-
     <!--
       - JavaScript and HTML must be in separate files: see our Content Security
       - Policy documentation[1] for details and explanation.
       -
       - [1]: http://developer.chrome.com/extensions/contentSecurityPolicy.html
-     -->
-    <script src="popup.js"></script>
-  </head>
-  <body>
-  </body>
+    -->
+</head>
+<body>
+    <h3> 可以自行選擇是否吃掉以下網站：<br /></h3>
+    <input id="all" type="checkbox" checked=false><label>全選</label><br /><hr />    
+    <div id="urlSwitch">
+        <input type="checkbox"><label>[中時]*.chinatimes.com</label><br />
+        <input type="checkbox"><label>[中天]*.ctitv.com.tw</label><br />
+        <input type="checkbox"><label>[中視]*.ctv.com.tw</label><br />
+        <input type="checkbox"><label>[旺e報]*.want-daily.com</label><br />
+        <input type="checkbox"><label>[時報週刊]*.ctweekly.com.tw</label><br />
+        <input type="checkbox"><label>[中時英文]*.wantchinatimes.com</label><br />
+        <input type="checkbox"><label>[時報週刊-愛女生雜誌粉絲團]*.facebook.com/ctwgirl</label><br />
+    </div>
+    <br />
+    <div id="status"></div>
+    <button id="save">儲存</button>
+</body>
+<script src="popup.js"></script>
 </html>
 
