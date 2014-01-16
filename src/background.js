@@ -45,3 +45,23 @@ var opt_extraInfoSpec = ["blocking"]; //synchronous
 
 chrome.webRequest.onBeforeRequest.addListener(
     listener, { urls: ["<all_urls>"] }, opt_extraInfoSpec);
+
+
+function plusLocalStorageCount()
+{
+    var count = parseInt(localStorage["count"],10) || 0;
+    count = count + 1;
+    localStorage["count"] = count;
+}
+
+function checkBlocked(details)
+{
+    if(details.redirectUrl == chrome.runtime.getURL("redirect.html"))
+    {
+        plusLocalStorageCount();
+    }
+}
+
+chrome.webRequest.onBeforeRedirect.addListener(
+    checkBlocked, { urls: ["<all_urls>"] }
+);
