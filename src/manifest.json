@@ -1,9 +1,9 @@
 {
   "name": "進擊的旺中獸",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "manifest_version": 2,
 
-  "description": "從今天起，拒看中時電子報、中天電視、中視的網站。<br />原始碼下載： https://github.com/leafwind/no-wang-wang<br />本軟體無任何商業行為，圖片為網路資源，如有侵權經告知後將會立即刪除。",
+  "description": "從今天起，拒看旺中集團的網站。原始碼下載： https://github.com/leafwind/no-wang-wang",
 
   "background": {
     "scripts": ["background.js", "redirect.js"]
