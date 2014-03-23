@@ -1,6 +1,6 @@
 {
-  "name": "進擊的旺中獸",
-  "version": "0.4.3",
+  "name": "旺中守門員（改）",
+  "version": "0.5.0",
   "manifest_version": 2,
 
   "description": "從今天起，拒看旺中集團的網站。原始碼下載： https://github.com/leafwind/no-wang-wang",
@@ -20,6 +20,7 @@
   },
 
   "web_accessible_resources": [
+    "notifyWebPage.js",
     "redirect.html"
   ],
 
@@ -28,10 +29,14 @@
   "permissions": [
     "webRequest",
     "webRequestBlocking",
+    "webNavigation",
+    "tabs",
     "*://*.chinatimes.com/*",
     "*://*.ctitv.com.tw/*",
     "*://*.ctv.com.tw/*",
     "*://*.want-daily.com/*",
+    "*://*.ctweekly.com.tw/*",
+    "*://*.wantchinatimes.com/*",
     "*://*.facebook.com/ctwgirl/*"
   ]
 }
