@@ -5,6 +5,12 @@
 後來又認為，如果有軟性的「提醒模式」以及自由選擇阻擋的網站
 會吸引更多人使用，就做到現在了。
 
+## 特色
+
+* 阻擋模式 vs. 提醒模式：可自由切換，並選擇是否阻擋各網頁
+* 入口網站篩選/提醒功能：針對大型入口網站 (e.g. yahoo) 新聞，提醒此來源為旺中集團
+* 阻擋清單有旺中集團底下所有媒體，包含：
+** 中時、中視、中天、旺報、時報、TVBS、八大，以及其所有粉絲團
 
 原版介紹：
 「
@@ -31,6 +37,9 @@
 
 更新紀錄，：
 
+* 0.6.0
+  - 新功能：入口網站篩選，包含 Yahoo 奇摩(中時/TVBS)、蕃薯藤(TVBS)、MSN(中時/TVBS)
+  - 阻擋清單增加 TVBS、八大 以及相關所有粉絲團
 * 0.5.0
   - 除了原本的「阻擋模式」之外，新增「提醒模式」，此模式仍然看的到旺中網頁但會有提示
 * 0.4.3
@@ -44,14 +53,27 @@
 
 阻擋的網址包含：
 
-* 中時電子報 `*.chinatimes.com`, `*.wantchinatimes.com`
+* 中時電子報 `*.chinatimes.com`, `*.wantchinatimes.com`, `*.facebook.com/CTfans`
   - 例外：中時部落格 `blog.chinatimes.com`
 * 中天電視 `*.ctitv.com.tw`
-* 中國電視公司 `*.ctv.com.tw`
-* 旺報 `*.want-daily.com`
-* 時報週刊 `*.ctweekly.com.tw` (0.4.0, 2014/1/7)
-* 愛女生雜誌粉絲團 `*.facebook.com/ctwgirl` (0.4.0, 2014/1/7)
+* 中國電視公司 `*.ctv.com.tw`, `*.facebook.com/chinatv`
+* 旺報 `*.want-daily.com`, `*.facebook.com/wantdaily`
+0.4.0 (2014/1/7)
+* 時報週刊 `*.ctweekly.com.tw`
+* 愛女生雜誌粉絲團 `*.facebook.com/ctwgirl`
+0.6.0 (2014/3/24)
+* TVBS `*.tvbs.com.tw`, `*.facebook.com/tvbsfb`
+* GTV(八大) `*.gtv.com.tw`, `*.facebook.com/loveGTV`
+* 以上所有媒體的粉絲團
 
+根據NCC資料 (摘自蘋果日報2012/7/31)
+旺中媒體集團包括: 
+* 新聞頻道: 中天新聞台
+* 衛星頻道: 中天, TVBS, GTV等
+* 無線電視: 中視等頻道
+* 報紙: 中國時報等
+* 新聞網站: 中時電子報
+* 雜誌: 時報周刊等
 
 ## 聲明
 
