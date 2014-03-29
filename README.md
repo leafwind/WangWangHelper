@@ -1,6 +1,6 @@
 # 旺中守門員（改）
 
-##緣由
+## 緣由
 偶然之下安裝了原本的[旺中守門員] (https://github.com/leafwind/no-wang-wang.git)  
 覺得這個概念很棒，但作者暫時沒有繼續更新  
   
@@ -9,7 +9,7 @@
 後來又認為，如果有軟性的「提醒模式」以及自由選擇阻擋的網站，會吸引更多人使用  
 就更新到現在
 
-##更新紀錄
+## 更新紀錄
 
 * 0.6.1
   - 修復「視窗變更大小的時候紅框不會更新」的bug
@@ -62,22 +62,22 @@
 
 本外掛會偵測您瀏覽網頁時的網址，當網址/新聞內容包含旺中旗下的媒體網站時，自動提示/阻擋瀏覽：
 
-阻擋的網址包含：
+### 阻擋的網址
 
 * 中時電子報 `*.chinatimes.com`, `*.wantchinatimes.com`, `*.facebook.com/CTfans`
-  - 例外：中時部落格 `blog.chinatimes.com`
+  * 例外：中時部落格 `blog.chinatimes.com`
 * 中天電視 `*.ctitv.com.tw`
 * 中國電視公司 `*.ctv.com.tw`, `*.facebook.com/chinatv`
 * 旺報 `*.want-daily.com`, `*.facebook.com/wantdaily`
 * 0.4.0 (2014/1/7)
-* 時報週刊 `*.ctweekly.com.tw`
-* 愛女生雜誌粉絲團 `*.facebook.com/ctwgirl`
+  * 時報週刊 `*.ctweekly.com.tw`
+  * 愛女生雜誌粉絲團 `*.facebook.com/ctwgirl`
 * 0.6.0 (2014/3/24)
-* TVBS `*.tvbs.com.tw`, `*.facebook.com/tvbsfb`
-* GTV(八大) `*.gtv.com.tw`, `*.facebook.com/loveGTV`
-* 以上所有媒體的粉絲團
+  * TVBS `*.tvbs.com.tw`, `*.facebook.com/tvbsfb`
+  * GTV(八大) `*.gtv.com.tw`, `*.facebook.com/loveGTV`
+  * 以上所有媒體的粉絲團
 
-根據NCC資料 (摘自蘋果日報2012/7/31)  
+### 根據NCC資料 (摘自蘋果日報2012/7/31)  
 旺中媒體集團包括：
 * 新聞頻道：中天新聞台
 * 衛星頻道：中天, TVBS, GTV等
