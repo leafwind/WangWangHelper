@@ -1,12 +1,11 @@
 //note: localStorage only supports Strings
 
-var blackLists = [
+var blackList = [
     "chinatimes.com",
     "ctitv.com.tw",
     "ctv.com.tw",
     "want-daily.com",
     "ctweekly.com.tw",
-    //"wantchinatimes.com",
     "tvbs.com.tw",
     "gtv.com.tw",
     "facebook.com\\/ctwgirl",
@@ -16,12 +15,16 @@ var blackLists = [
     "facebook.com\\/tvbsfb",
     "facebook.com\\/loveGTV"
 ];
-localStorage["lenLists"] = blackLists.length;
-localStorage["blackLists"] = JSON.stringify(blackLists);
+
+//var whiteList = ["udn.com"];
+
+localStorage["lenList"] = blackList.length;
+localStorage["blackList"] = JSON.stringify(blackList);
 localStorage["mode"] = 0;
 
-for (var i = 0, a = new Array(blackLists.length); i < blackLists.length;) a[i++] = 1;
-localStorage["urlSwitch"] = JSON.stringify(a); 
+var b = new Array(blackList.length);
+for (var i = 0; i < blackList.length; i++) { b[i] = 1; }
+localStorage["urlSwitch"] = JSON.stringify(b);
 
 /* onBeforeRequest event: check a URL is in black list or not */
 
@@ -36,9 +39,9 @@ var listener = function(details)
         return {};
     }
 
-    var L = JSON.parse(localStorage["blackLists"]);
+    var L = JSON.parse(localStorage["blackList"]);
     var urlSwitch = JSON.parse(localStorage["urlSwitch"]);
-    for (var i = 0; i < localStorage["lenLists"]; ++i)
+    for (var i = 0; i < localStorage["lenList"]; ++i)
     {
         if ( (urlSwitch[i] == 1) && (details.url.search(new RegExp(L[i])) > -1) ) //pos
         {
@@ -77,8 +80,8 @@ chrome.webRequest.onBeforeRedirect.addListener(
     checkBlocked, { urls: ["<all_urls>"] }
 );
 
-
-chrome.tabs.onUpdated.addListener( function (tabId, changeInfo, tab) {
+function drawMessageOnScreen(tabId, changeInfo, tab)
+{
     if (changeInfo.status == 'complete' && tab.active) {
         if (tab.url.indexOf("blog.chinatimes.com") !== -1) {
             return {};
@@ -97,28 +100,29 @@ chrome.tabs.onUpdated.addListener( function (tabId, changeInfo, tab) {
               || tab.url.indexOf("news.yahoo.com") !== -1
               || tab.url.indexOf("news.msn.com") !== -1)
         {
-            chrome.tabs.executeScript(null, { file: "jquery-1.8.2.min.js" }, function() {
-                chrome.tabs.executeScript(null, { file: "function.js" });
+            //chrome.tabs.executeScript(null, { file: "jquery-1.8.2.min.js" }, function() {
+                //chrome.tabs.executeScript(null, { file: "function.js" });
                 chrome.tabs.executeScript(null, { file: "entrySite.js" });
-            });
+            //});
         }
         else
         {
-            var L = JSON.parse(localStorage["blackLists"]);
+            var L = JSON.parse(localStorage["blackList"]);
             var urlSwitch = JSON.parse(localStorage["urlSwitch"]);
-            for (var i = 0; i < localStorage["lenLists"]; ++i)
+            for (var i = 0; i < localStorage["lenList"]; ++i)
             {
                 if ( (urlSwitch[i] == 1) && (tab.url.search(new RegExp(L[i])) > -1) )
                 {
                     localStorage["blockedURL"] = tab.url;
                     console.log(tab.url + " matched " + i + " : " + RegExp(L[i]) + " : " + tab.url.search(new RegExp(L[i])));
-
-                    //chrome.tabs.executeScript( null, { file: "notifyWebPage.js" } );
-                    chrome.tabs.executeScript(null, { file: "jquery-1.8.2.min.js" }, function() {
-                        chrome.tabs.executeScript(null, { file: "function.js" }, function() {
-                            chrome.tabs.executeScript(null, { code: "draw('相關媒體')" });
-                        });
-                    });
+                    
+                    //chrome.tabs.executeScript(null, { file: "jquery-1.8.2.min.js" }, function() {
+                        //chrome.tabs.executeScript(null, { file: "function.js" });
+                        chrome.tabs.executeScript(null, {
+                            code: "var mediaName = getDiv('_mediaName');"+
+                            "draw('旺中集團');"+
+                            "mediaName.name = '旺中集團';" });
+                    //});
                     return {};
                 }
             }
@@ -126,5 +130,36 @@ chrome.tabs.onUpdated.addListener( function (tabId, changeInfo, tab) {
         }
 
     }
-})
+}
 
+function promptNewVersion(details) {
+    if (details.reason == "install" || details.reason == "update") {
+        chrome.tabs.create({url: "options.html"});
+    }
+}
+
+chrome.tabs.onUpdated.addListener( drawMessageOnScreen );
+
+chrome.runtime.onInstalled.addListener( promptNewVersion );
+
+/*
+function onRequest(request, sender, sendResponse) {
+    if (request.method == 'filterEntrySite') {
+        // 顯示設定新聞小幫手的 page action
+        chrome.pageAction.show(sender.tab.id);
+    }
+    if (request.method == 'checkNewsSite') {
+        add_notification(request.title, request.body, request.link);
+    }
+    if (request.method == 'check_report') {
+        check_report(request.title, request.url, sendResponse);
+        return;
+    }
+
+    // Return nothing to let the connection be cleaned up.
+    sendResponse({});
+};
+
+// Listen for the content script to send a message to the background page.
+chrome.extension.onRequest.addListener(onRequest);
+*/

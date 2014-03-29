@@ -1,6 +1,6 @@
 {
   "name": "旺中守門員（改）",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "manifest_version": 2,
 
   "description": "從今天起，拒看旺中集團的網站。原始碼下載： https://github.com/leafwind/no-wang-wang",
@@ -48,13 +48,16 @@
     "*://*.facebook.com/chinatv/*",
     "*://*.facebook.com/wantdaily/*",
     "*://*.facebook.com/tvbsfb/*",
-    "*://*.facebook.com/loveGTV/*"
+    "*://*.facebook.com/loveGTV/*",
+    "*://*.udn.com/*"
   ],
 
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["jquery-2.1.0.min.js"] // to load jQuery, this is the MUST step
+      "js": ["jquery-2.1.0.min.js", "function.js"],
+      "run_at": "document_start",
+      "_comment": "this is the must for loading jQuery"
     }
   ]
 }
