@@ -9,7 +9,7 @@
 後來又認為，如果有軟性的「提醒模式」以及自由選擇阻擋的網站，會吸引更多人使用  
 就更新到現在
 
-##更新紀錄：
+##更新紀錄
 
 * 0.6.1
   - 修復「視窗變更大小的時候紅框不會更新」的bug
@@ -36,22 +36,26 @@
 * 阻擋清單包含旺中集團底下所有媒體：中時、中視、中天、旺報、時報、TVBS、八大，以及其所有粉絲團
 
 原版介紹：  
-「
+「  
 自動拒看旺旺中時集團旗下所有網路媒體。  
 
-拒絕旺旺中時，因為其旗下的中天電視台、中國電視公司（中視）、中國時報，在[併購中嘉網路](http://zh.wikipedia.org/zh-tw/%E6%97%BA%E6%97%BA%E4%B8%AD%E6%99%82%E4%BD%B5%E8%B3%BC%E4%B8%AD%E5%98%89%E6%A1%88)時，態度乖張、處理相關新聞內容偏頗、公器私用，有失其身為大眾媒體應有的態度。  
-
-為表達抗議，以及防止手殘誤上這些網站，本軟體會將這幾個新聞媒體的網站封鎖，於是你就看不到這些網站上的廣告了，要是夠多人使用這個軟體，廣告主就知道在這些站投廣告的效果比以前差，投給旺旺中時集團的廣告量會降低，間接達到抗議的目的。  
+拒絕旺旺中時，因為其旗下的中天電視台、中國電視公司（中視）、中國時報，在[併購中嘉網路](http://zh.wikipedia.org/zh-tw/%E6%97%BA%E6%97%BA%E4%B8%AD%E6%99%82%E4%BD%B5%E8%B3%BC%E4%B8%AD%E5%98%89%E6%A1%88)時  
+態度乖張、處理相關新聞內容偏頗、公器私用，有失其身為大眾媒體應有的態度。  
+  
+為表達抗議，以及防止手殘誤上這些網站，本軟體會將這幾個新聞媒體的網站封鎖  
+於是你就看不到這些網站上的廣告了  
+要是夠多人使用這個軟體，廣告主就知道在這些站投廣告的效果比以前差  
+投給旺旺中時集團的廣告量會降低，間接達到抗議的目的。  
 」
 
 ## 安裝方式
 
-* 本軟體為一個 Chrome 擴充程式
+* 本軟體為 Chrome 擴充程式
   - [原始碼 @ git repo] (https://github.com/leafwind/no-wang-wang.git)
   - [安裝網址 @ Chrome Web Store] (https://chrome.google.com/webstore/detail/kkihipkdoiapaengcegmaeplaocbhbne/publish-accepted-testers)
 
-* 原始版本「旺中守門員」作者為 [chitsaou] (https://github.com/chitsaou)
-  - [原始碼 @ git repo] (https://github.com/chitsaou/no-wang-wang.git)
+* 原始版本「旺中守門員」
+  - [原始碼 @ git repo] (https://github.com/chitsaou/no-wang-wang.git) 作者 [chitsaou] (https://github.com/chitsaou)
   - [安裝網址 @ Chrome Web Store] (https://chrome.google.com/webstore/detail/jgoljbdcdakinkigihjocpniamcgofmm/)
 
 ## 技術細節
@@ -65,22 +69,22 @@
 * 中天電視 `*.ctitv.com.tw`
 * 中國電視公司 `*.ctv.com.tw`, `*.facebook.com/chinatv`
 * 旺報 `*.want-daily.com`, `*.facebook.com/wantdaily`
-0.4.0 (2014/1/7)
+* 0.4.0 (2014/1/7)
 * 時報週刊 `*.ctweekly.com.tw`
 * 愛女生雜誌粉絲團 `*.facebook.com/ctwgirl`
-0.6.0 (2014/3/24)
+* 0.6.0 (2014/3/24)
 * TVBS `*.tvbs.com.tw`, `*.facebook.com/tvbsfb`
 * GTV(八大) `*.gtv.com.tw`, `*.facebook.com/loveGTV`
 * 以上所有媒體的粉絲團
 
-根據NCC資料 (摘自蘋果日報2012/7/31)
-旺中媒體集團包括: 
-* 新聞頻道: 中天新聞台
-* 衛星頻道: 中天, TVBS, GTV等
-* 無線電視: 中視等頻道
-* 報紙: 中國時報等
-* 新聞網站: 中時電子報
-* 雜誌: 時報周刊等
+根據NCC資料 (摘自蘋果日報2012/7/31)  
+旺中媒體集團包括：
+* 新聞頻道：中天新聞台
+* 衛星頻道：中天, TVBS, GTV等
+* 無線電視：中視等頻道
+* 報紙：中國時報等
+* 新聞網站：中時電子報
+* 雜誌：時報周刊等
 
 ## 聲明
 
