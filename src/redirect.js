@@ -3,7 +3,7 @@ function getBlockedURL()
     if (localStorage["blockedURL"] !== undefined)
         return localStorage["blockedURL"];
     else
-        return "";
+        return "unknown url";
 }
 
 function getLocalStorageCount() {
@@ -21,7 +21,10 @@ function prompt()
     }
     var countField = document.getElementById("countField");
     if ( countField != undefined) {
-        countField.innerHTML = getLocalStorageCount();
+        var count = getLocalStorageCount();
+        if ( count ) {
+            countField.innerHTML = count;
+        }
     }
 }
 
