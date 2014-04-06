@@ -1,22 +1,67 @@
+<!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8"> 
-    <title>你值得更優質的媒體</title>
-</head>
-<link href='http://fonts.googleapis.com/css?family=Rosario:400,400italic' rel='stylesheet' type='text/css'>
-<body style="font-family: '微軟正黑體', Microsoft JhengHei', 'Rosario', sans-serif;">
-
-<div style="position:relative; left:25%; width:50%; top: 10px; border: 1px dashed; border-radius:15px; background-color: #fffdcc">
-    <div style="margin: 10px 10px 10px 10px;">
-        <h2>
-            您嘗試前往旺中集團的媒體網站<br />
-            <span id="blockedURLField" style="color:blue;"></span><br />
-            但是被守門員阻擋了。
-        </h2>
-        <span style="color: #275EF5;">目前戰績：共阻擋了 <span id="countField" style="color: #ff0000; font-weight: bold; font-size: 200%;">0</span><span> 隻旺中巨獸</span></span><br />
-        <br />
-        您可以參考以下網站獲得新知：<br />
-        <br />
+  <head>
+      <meta charset="UTF-8">
+      <title>你值得更優質的媒體</title>
+      <style>
+        body {
+          font-family: '微軟正黑體', 'Microsoft JhengHei', Helvetica, Arial, sans-serif;
+          line-height: 1.65em;
+          background: #f0f0f0;
+          font-size: 14px;
+        }
+        a { color: #08c; text-decoration: none; }
+        .wrapper {
+          max-width: 460px;
+          width: 100%;
+          margin: 20px auto;
+          background-color: #fff;
+          padding: 15px;
+          border: 1px solid #e0e0e0;
+          border-radius: 4px;
+        }
+        .count {
+          color: #dd4345;
+          font-weight: bold;
+          font-size: 16px;
+        }
+        .title { margin: 0 0 5px; }
+        .blocked-url {
+          padding: 0 2px;
+          color: #777;
+          font-weight: normal;
+        }
+        .forbid {
+          -webkit-transform: scale(0.7, 0.7);
+          width: 50px;
+          height: 50px;
+          border-radius: 70px;
+          border: 10px solid #dd3345;
+          margin: 20px auto 10px;
+          background: linear-gradient(45deg, transparent 29px, #dd3345 29px, #dd3345 41px, transparent 41px);
+          position: relative;
+          z-index: 4;
+        }
+      </style>
+      <script src="redirect.js"></script>
+  </head>
+  <body>
+    <div class="forbid"></div>
+    <div class="wrapper">
+      <p class="title">
+          您嘗試前往旺中集團的媒體網站
+          <span id="blockedURLField" class="blocked-url">http://example.com</span>
+          ，但是被守門員阻擋了。
+      </p>
+      <div class="current-stand">
+        目前戰績：共阻擋了
+        <span id="countField" class="count">0</span>
+        隻旺中巨獸
+      </div>
+      <p>
+        您可以參考以下網站獲得新知：
+      </p>
+      <p>
         <a href="http://internationalnewsstation.tw/">外交部國際新聞讀報站</a><br />
         <a href="http://world.yam.com/">地球圖輯隊</a><br />
         <a href="http://www.insight-post.tw/">洞見Insight－國際事務評論網</a><br />
@@ -24,13 +69,9 @@
         <a href="http://www.economist.com/">Economist (英文)</a><br />
         <a href="http://www.economistgroup.cn/news/">Economist (簡體中文)</a><br />
         <a href="http://www.bbc.co.uk/zhongwen/trad/">BBC 中文網</a><br />
-        <br />
-        或網友自製的：<a href="http://newsfortw.com/"><span style="color:#275EF5; font-size:150%; ">給台灣人的國際新聞 beta</span></a><br />
-        收集了包含以上這些來源，並整合以供閱讀<br />
-        <br />
+      </p>
+      或網友自製<a href="http://newsfortw.com/">給台灣人的國際新聞 beta</a>
+      ，收集了包含以上這些來源，並整合以供閱讀。
     </div>
-</div>
-</body>
-<script src="redirect.js"></script>
-
+  </body>
 </html>
