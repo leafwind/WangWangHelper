@@ -1,8 +1,5 @@
 var DEBUG_ = false;
-
-var blackListName = [
-    "中時", "中天", "中視", "旺報", "時報週刊", "TVBS", "八大", "中時愛女生雜誌粉絲團", "中時粉絲團", "中視粉絲團", "旺報粉絲團", "TVBS粉絲團", "八大粉絲團" 
-];
+var blackList;
 
 // 從 db 中判斷 title, url 是否是錯誤新聞，是的話執行 cb 並傳入資訊
 var check_report = function(title, url, cb) {   
@@ -139,7 +136,7 @@ var censorFacebook = function(baseNode) {
         check_report(titleText, domain, function(report){
             containerNode.addClass(className);
             containerNode.append(buildWarningMessage({
-                title: blackListName[report.idx],
+                title: blackList[report.idx]["name"],
                 link: ""
             }));
         });
@@ -218,6 +215,16 @@ var censorFacebook = function(baseNode) {
         var linkHref = userContent.find("a").attr("href");
         censorFacebookNode(userContent, titleText, linkHref);
     });
+/*動態（新）
+    $(baseNode)
+    .find("._1ui5")
+    .not(".nowangwang-checked")
+    .each(function(idx, userContent) {
+        userContent = $(userContent);
+        var titleText = userContent.find(".mbs").text();
+        var linkHref = userContent.find("a").attr("href");
+        censorFacebookNode(userContent, titleText, linkHref);
+    });*/
 }
 
 if (DEBUG_) console.log('censorFacebook time', Date.now() - t1_);
@@ -303,4 +310,9 @@ var main = function() {
 
   //sync_report_data();
 };
-main();
+
+chrome.extension.sendRequest({method: "getBlackList"}, function(response) {
+    blackList = response.myBlackList;
+    main();
+});
+

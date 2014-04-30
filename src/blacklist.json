@@ -1,0 +1,54 @@
+[
+    {
+        "name":"中時",
+        "url" :"chinatimes.com"
+    },
+    {
+        "name":"中天",
+        "url" :"ctitv.com.tw"
+    },
+    {
+        "name":"中視",
+        "url" :"ctv.com.tw"
+    },
+    {
+        "name":"旺報",
+        "url" :"want-daily.com"
+    },
+    {
+        "name":"時報",
+        "url" :"ctweekly.com.tw"
+    },
+    {
+        "name":"TVBS",
+        "url" :"tvbs.com.tw"
+    },
+    {
+        "name":"八大",
+        "url" :"gtv.com.tw"
+    },
+    {
+        "name":"中時愛女生雜誌粉絲團",
+        "url" :"facebook.com\\/ctwgirl"
+    },
+    {
+        "name":"中時粉絲團",
+        "url" :"facebook.com\\/CTfans"
+    },
+    {
+        "name":"中視粉絲團",
+        "url" :"facebook.com\\/chinatv"
+    },
+    {
+        "name":"旺報粉絲團",
+        "url" :"facebook.com\\/wantdaily"
+    },
+    {
+        "name":"TVBS粉絲團",
+        "url" :"facebook.com\\/tvbsfb"
+    },
+    {
+        "name":"八大粉絲團",
+        "url" :"facebook.com\\/loveGTV"
+    }
+]

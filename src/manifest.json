@@ -1,12 +1,12 @@
 {
-  "name": "旺中守門員（改）",
-  "version": "0.7.0",
+  "name": "旺中小幫手",
+  "version": "0.7.1",
   "manifest_version": 2,
 
-  "description": "從今天起，拒看旺中集團的網站。原始碼下載： https://github.com/leafwind/no-wang-wang",
+  "description": "幫助你面對旺中媒體巨獸。原始碼下載： https://github.com/leafwind/no-wang-wang",
 
   "background": {
-    "scripts": ["background.js", "redirect.js"]
+    "scripts": ["jquery-2.1.0.min.js", "background.js", "redirect.js"]
   },
 
   "icons": {
@@ -22,7 +22,8 @@
   "web_accessible_resources": [
     "notifyWebPage.js",
     "redirect.html",
-    "jquery-2.1.0.min.js"
+    "jquery-2.1.0.min.js",
+    "blacklist.json"
   ],
 
   "options_page": "options.html",
