@@ -1,7 +1,7 @@
-# 旺中守門員（改）
+# 旺中小幫手
 
 ## 緣由
-偶然之下安裝了原本的[旺中守門員] (https://github.com/leafwind/no-wang-wang.git)  
+偶然之下安裝了原本的[旺中守門員](https://github.com/leafwind/no-wang-wang.git)  
 覺得這個概念很棒，但作者暫時沒有繼續更新  
   
 一開始是覺得阻擋的提示可以再優化  
@@ -11,6 +11,9 @@
 
 ## 更新紀錄
 
+* 0.7.1
+  * 改名為旺中小幫手
+  * 程式架構微調
 * 0.7.0
   * 新功能「FB提示功能」（參考新聞小幫手）
   * 阻擋頁面視覺優化(by muan)
@@ -40,28 +43,15 @@
 * 入口網站篩選/提醒功能：針對大型入口網站 (e.g. yahoo) 新聞，提醒此來源為旺中集團
 * 阻擋清單包含旺中集團底下所有媒體：中時、中視、中天、旺報、時報、TVBS、八大，以及其所有粉絲團
 
-原版介紹：  
-「  
-自動拒看旺旺中時集團旗下所有網路媒體。  
-
-拒絕旺旺中時，因為其旗下的中天電視台、中國電視公司（中視）、中國時報，在[併購中嘉網路](http://zh.wikipedia.org/zh-tw/%E6%97%BA%E6%97%BA%E4%B8%AD%E6%99%82%E4%BD%B5%E8%B3%BC%E4%B8%AD%E5%98%89%E6%A1%88)時  
-態度乖張、處理相關新聞內容偏頗、公器私用，有失其身為大眾媒體應有的態度。  
-  
-為表達抗議，以及防止手殘誤上這些網站，本軟體會將這幾個新聞媒體的網站封鎖  
-於是你就看不到這些網站上的廣告了  
-要是夠多人使用這個軟體，廣告主就知道在這些站投廣告的效果比以前差  
-投給旺旺中時集團的廣告量會降低，間接達到抗議的目的。  
-」
-
 ## 安裝方式
 
 * 本軟體為 Chrome 擴充程式
-  - [原始碼 @ git repo] (https://github.com/leafwind/no-wang-wang.git)
-  - [安裝網址 @ Chrome Web Store] (https://chrome.google.com/webstore/detail/kkihipkdoiapaengcegmaeplaocbhbne/publish-accepted-testers)
+  - [原始碼 @ git repo](https://github.com/leafwind/no-wang-wang.git)
+  - [安裝網址 @ Chrome Web Store](https://chrome.google.com/webstore/detail/kkihipkdoiapaengcegmaeplaocbhbne/publish-accepted-testers)
 
 * 原始版本「旺中守門員」
-  - [原始碼 @ git repo] (https://github.com/chitsaou/no-wang-wang.git) 作者 [chitsaou] (https://github.com/chitsaou)
-  - [安裝網址 @ Chrome Web Store] (https://chrome.google.com/webstore/detail/jgoljbdcdakinkigihjocpniamcgofmm/)
+  - [原始碼 @ git repo](https://github.com/chitsaou/no-wang-wang.git) 作者 [chitsaou](https://github.com/chitsaou)
+  - [安裝網址 @ Chrome Web Store](https://chrome.google.com/webstore/detail/jgoljbdcdakinkigihjocpniamcgofmm/)
 
 ## 技術細節
 
@@ -94,6 +84,7 @@
 ## 聲明
 
 本軟體：
+
 * 不會記錄您的上網歷程
 * 不會記錄您試圖上幾次這些網站
 * 不會記錄您與這些網站傳輸了什麼資料
