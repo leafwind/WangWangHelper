@@ -11,6 +11,9 @@
 
 ## 更新紀錄
 
+* 0.7.2
+  * 將阻擋功能獨立回旺中守門員
+  * 只需要阻擋功能的使用者可以前往 [旺中守門員（改）](https://chrome.google.com/webstore/detail/pcnjmepalodlodhkngjhdejnaacmjnfj) 下載
 * 0.7.1
   * 改名為旺中小幫手
   * 程式架構微調
