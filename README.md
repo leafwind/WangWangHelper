@@ -1,7 +1,7 @@
 # 旺中小幫手
 
 ## 緣由
-偶然之下安裝了原本的[旺中守門員](https://github.com/leafwind/no-wang-wang.git)  
+偶然之下安裝了原本的[旺中守門員](https://github.com/chitsaou/no-wang-wang.git)  
 覺得這個概念很棒，但作者暫時沒有繼續更新  
   
 一開始是覺得阻擋的提示可以再優化  
@@ -49,8 +49,8 @@
 ## 安裝方式
 
 * 本軟體為 Chrome 擴充程式
-  - [原始碼 @ git repo](https://github.com/leafwind/no-wang-wang.git)
-  - [安裝網址 @ Chrome Web Store](https://chrome.google.com/webstore/detail/kkihipkdoiapaengcegmaeplaocbhbne/publish-accepted-testers)
+  - [原始碼 @ git repo](https://github.com/leafwind/WangWangHelper.git)
+  - [安裝網址 @ Chrome Web Store](https://chrome.google.com/webstore/detail/kkihipkdoiapaengcegmaeplaocbhbne/)
 
 * 原始版本「旺中守門員」
   - [原始碼 @ git repo](https://github.com/chitsaou/no-wang-wang.git) 作者 [chitsaou](https://github.com/chitsaou)
